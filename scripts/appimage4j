@@ -1,0 +1,7 @@
+#!/bin/bash
+
+DIR=$(dirname $0)
+CMD="$DIR/appimage4j.sh"
+CLASS="de.mobanisto.appimage4j.Main"
+
+exec "$CMD" "$CLASS" "$@"

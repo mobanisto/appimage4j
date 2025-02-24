@@ -1,0 +1,44 @@
+wrapper {
+    gradleVersion = '8.12'
+}
+
+allprojects {
+    group = pGroup
+    version = pVersion
+}
+
+ext.libraries = [
+    project(':appimage4j-core'),
+]
+
+configure(libraries) {
+    apply plugin: 'java-library'
+    apply plugin: 'maven-publish'
+
+    java {
+        withSourcesJar()
+    }
+}
+
+configure(subprojects.findAll {it !in libraries}) {
+    apply plugin: 'java'
+}
+
+subprojects {
+    apply plugin: 'eclipse'
+
+    repositories {
+        maven {
+            url = 'https://mvn.topobyte.de'
+        }
+        maven {
+            url = 'https://mvn.slimjars.com'
+        }
+        mavenCentral()
+    }
+
+    java {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+}

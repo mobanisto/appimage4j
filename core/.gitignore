@@ -1,0 +1,6 @@
+bin
+build
+.project
+.classpath
+.settings/*
+!.settings/org.eclipse.core.resources.prefs
