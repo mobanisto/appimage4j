@@ -17,7 +17,7 @@ See [LGPL.md](LGPL.md) and [GPL.md](GPL.md) for details.
 Some functionality requires a JVM >= 13 in order to work properly.
 In particular, extracting AppImage packages only works on Java 13+.
 This is because AppImage packages often contain symbolic links and due to
-[a bug](https://bugs.openjdk.org/browse/JDK-8220793) only fixed in 2019
+[a bug](https://bugs.openjdk.org/browse/JDK-8220793) only fixed in 2019,
 the JVM is not able to modify the file properties of symbolic links.
 
 ### Building
@@ -43,7 +43,7 @@ Any of the subtasks accepts its own set of command line arguments.
 #### Creating an AppImage package
 
 To create an AppImage self-contained executable, run this, providing a
-properly preapred app image direcotry as input:
+properly prepared app image direcotry as input:
 
     ./scripts/appimage4j create --input <app impage dir> --output <app image>
 
