@@ -1,5 +1,11 @@
 dependencies {
     implementation project(':appimage4j')
+    implementation 'de.topobyte:commons-cli-helper:0.3.0'
+
+    runtimeOnly 'org.slf4j:slf4j-reload4j:2.0.16'
+    runtimeOnly 'ch.qos.reload4j:reload4j:1.2.26'
+
+    testRuntimeOnly 'junit:junit:4.12'
 }
 
 task copyJars(type: Copy) {

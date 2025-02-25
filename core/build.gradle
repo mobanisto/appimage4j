@@ -6,6 +6,13 @@ if (project.hasProperty("topobyte")) {
 eclipse.project.name = 'appimage4j'
 
 dependencies {
+    api 'de.topobyte:squashfs-tools:0.0.1'
+    api 'net.fornwall:jelf:0.9.0'
+    api 'commons-io:commons-io:2.18.0'
+
+    testImplementation 'junit:junit:4.12'
+    testRuntimeOnly 'org.slf4j:slf4j-reload4j:2.0.16'
+    testRuntimeOnly 'ch.qos.reload4j:reload4j:1.2.26'
 }
 
 def pomInfo = new XmlSlurper().parse(file('info.pom'));
