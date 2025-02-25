@@ -3,6 +3,8 @@ if (project.hasProperty("topobyte")) {
         + '/.gradle/topobyte.gradle'
 }
 
+eclipse.project.name = 'appimage4j'
+
 dependencies {
 }
 

@@ -1,3 +1,3 @@
 include 'core', 'cli'
-project(':core').name = 'appimage4j-core'
+project(':core').name = 'appimage4j'
 project(':cli').name = 'appimage4j-cli'

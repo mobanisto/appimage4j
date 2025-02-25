@@ -1,5 +1,5 @@
 dependencies {
-    implementation project(':appimage4j-core')
+    implementation project(':appimage4j')
 }
 
 task copyJars(type: Copy) {
