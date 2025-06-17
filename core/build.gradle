@@ -6,7 +6,7 @@ if (project.hasProperty("topobyte")) {
 eclipse.project.name = 'appimage4j'
 
 dependencies {
-    api 'de.topobyte:squashfs-tools:0.0.1'
+    api 'de.topobyte:squashfs-tools:0.1.0'
     api 'net.fornwall:jelf:0.9.0'
     api 'commons-io:commons-io:2.18.0'
 
