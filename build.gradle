@@ -28,17 +28,19 @@ subprojects {
     apply plugin: 'eclipse'
 
     repositories {
-        maven {
-            url = 'https://mvn.topobyte.de'
-        }
-        maven {
-            url = 'https://mvn.slimjars.com'
-        }
         mavenCentral()
     }
 
     java {
         sourceCompatibility = 1.8
         targetCompatibility = 1.8
+    }
+}
+
+configure(subprojects.findAll {it !in libraries}) {
+    repositories {
+        maven {
+            url = 'https://mvn.topobyte.de'
+        }
     }
 }
